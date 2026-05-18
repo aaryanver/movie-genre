@@ -6,8 +6,8 @@ import numpy as np
 @st.cache_resource
 def load_model_and_scaler():
     try:
-        model = joblib.load('model.pkl')
-        scaler = joblib.load('scaler.pkl')
+        model = joblib.load('movie_genre_classifier/model.pkl')
+        scaler = joblib.load('movie_genre_classifier/scaler.pkl')
         return model, scaler
     except FileNotFoundError:
         st.error("Model or Scaler not found. Please run train.py first.")
